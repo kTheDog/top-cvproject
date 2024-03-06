@@ -27,7 +27,7 @@ export default function EducationalExperience (props) {
         <fieldset onChange={(e) => {handleInput(e)}}>
         <h2>Educational Experience</h2>
           <div className="normal-input">
-            <input onChange={(e) => {handleInput(e)}} type="text" id="school-name" placeholder="School Name" value={educationalExperience['school-name']}></input>
+            <input onChange={(e) => {handleInput(e)}} type="text" id="school-name" placeholder="School Name" value={educationalExperience}></input>
             <label htmlFor="school-name"></label>
           </div>
 
