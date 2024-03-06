@@ -1,8 +1,9 @@
+import { useState } from "react"
 
 export default function GeneralInfo (props) {
   console.log(props.data[0])
   let [generalInfo, setGeneralInfo] = props.data
-
+  let [editing, setEditing] = useState(false)
   let currentInputData = generalInfo
 
   console.log(generalInfo)
@@ -19,8 +20,10 @@ export default function GeneralInfo (props) {
     console.log(input)
     console.log(currentInputData)
   }
+  let component;
 
-  return (
+  if (editing) {
+    component =
     <div className="general-info">
       <fieldset onChange={(e) => {handleInput(e)}}>
       <h2>General Information</h2>
@@ -42,5 +45,11 @@ export default function GeneralInfo (props) {
 
       <button className="submit" onClick={submitButton()}>Save</button>
     </div>
-  )
+  } else {
+    component =
+    <div className="general-info mini-display">
+      <button className="add-button" onClick={() => {setEditing(true)}}>Edit</button>
+    </div>
+  }
+  return component
 }

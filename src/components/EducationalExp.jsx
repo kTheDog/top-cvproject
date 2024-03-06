@@ -27,18 +27,18 @@ export default function EducationalExperience (props) {
         <fieldset onChange={(e) => {handleInput(e)}}>
         <h2>Educational Experience</h2>
           <div className="normal-input">
-            <input type="text" id="" placeholder=""></input>
-            <label htmlFor=""></label>
+            <input onChange={(e) => {handleInput(e)}} type="text" id="school-name" placeholder="School Name" value={educationalExperience['school-name']}></input>
+            <label htmlFor="school-name"></label>
           </div>
 
           <div className="normal-input">
-            <input type="text" id="" placeholder=""></input>
-            <label htmlFor=""></label>
+            <input type="text" id="title-study" placeholder="Title of study"></input>
+            <label htmlFor="title-study"></label>
           </div>
 
           <div className="normal-input">
-            <input type="tel" id="" placeholder=""></input>
-            <label htmlFor=""></label>
+            <input type="date" id="study-date" placeholder="Date of study"></input>
+            <label htmlFor="study-date"></label>
           </div>
         </fieldset>
 
@@ -49,7 +49,7 @@ export default function EducationalExperience (props) {
   } else {
     component =
       <div className="educational-exp mini-display">
-        <button className="edit-button" onClick={() => {setEditing(true)}}>Edit</button>
+        <button className="add-button" onClick={() => {setEditing(true)}}>Edit</button>
       </div>
   }
 
