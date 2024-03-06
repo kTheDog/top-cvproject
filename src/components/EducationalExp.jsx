@@ -13,7 +13,7 @@ export default function EducationalExperience (props) {
     setEducationalExperience(currentInputData)
     setEditing(false)
   }
-
+ //advanced // new
   function handleInput(e) {
     let input = e.target
     Object.assign(currentInputData, {[e.target.id]: e.target.value})
